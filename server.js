@@ -13,10 +13,14 @@ const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 
+// this will be the connection to MongoDB through .env
 const uri = process.env.ATLAS_URI;
+// S5: run "npm i dotenv" in terminal to connect to .env file
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
+  useCreateIndex: true,
+  // S6: added the following option according nodejs instructions to use new Server Discover and Monitoring engine
   useUnifiedTopology: true,
 });
 
