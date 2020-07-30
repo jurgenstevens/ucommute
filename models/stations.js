@@ -11,3 +11,5 @@ const stationSchema = new Schema({
 });
 
 const Stations = mongoose.model("Stations", stationSchema);
+
+module.export = Stations;
