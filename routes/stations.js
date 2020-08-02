@@ -9,6 +9,6 @@ const Stations = require("../models/stations");
 router.get("/", (req, res) => {
   // we're going to find the post from the schema then create the promise to return our posts in JSON format
   Stations.find()
-  .then((post) => res.json(post))
-  .catch(err) => res.status(400).res.json(`Error: ${err}`)
+    .then((post) => res.json(post))
+    .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
