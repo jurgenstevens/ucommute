@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 // S7 Add train station schema
 const stationSchema = new Schema({
-  admin: { type: String, required: true },
-  stopID: { type: String, required: true },
-  stations: { type: String, required: true },
+  admin: { type: String, required: false },
+  stopID: { type: Number, required: true },
+  station: { type: String, required: true },
   line: { type: String, required: true },
   transfer: { type: Boolean, required: true },
 });

@@ -12,3 +12,12 @@ router.get("/", (req, res) => {
     .then((post) => res.json(post))
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
+
+// S13: Go to MongoDB -> Collections -> Add My Own Data
+// [
+//   "admin": "jurgen.stevens@yahoo.com",
+//   "stopID": '100',
+//   "station": "Midway",
+//   "line": "Orange",
+//   "transfer": "false",
+// ]
