@@ -13,7 +13,9 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
-// S13: Go to MongoDB -> Collections -> Add My Own Data
+module.exports = router;
+// S13: Go to MongoDB -> Collections -> Add My Own Data DON'T FORGET TO module.export
+// then continue S13 and add the middleware in server.js
 // [
 //  "line": "Blue",
 //   "direction": "Inbound",

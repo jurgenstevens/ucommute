@@ -26,7 +26,13 @@ mongoose.connect(uri, {
 
 const connection = mongoose.connection;
 connection.once("open", () =>
-  console.log("MongoDB connection established successfully")
+  console.log("Mongoose connection established successfully")
 );
 
+//S13: this is the middleware and will be imported from the stations.js in the routes folder
+const stationsRouter = require("./routes/stations");
+app.use("/stations", stationsRouter);
+
 app.listen(port, () => console.log(`The app is running on ${port}`));
+// Mongoose server connection runs without any issues
+// Next create the schema in models/stations.js

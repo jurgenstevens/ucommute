@@ -12,4 +12,4 @@ const stationSchema = new Schema({
 // S8: this will be exported to be used for the routes
 const Stations = mongoose.model("Stations", stationSchema);
 // S9: here we're exporting and continue onto the routes
-module.export = Stations;
+module.exports = Stations;
