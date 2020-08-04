@@ -10,12 +10,15 @@ router.get("/", (req, res) => {
   // we're going to find the station from the schema then create the promise to return our station in JSON format
   Stations.find()
     .then((station) => res.json(station))
-    .catch((err) => res.status(400).res.json(`Error: ${err}`));
+    .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
 module.exports = router;
 // S13: Go to MongoDB -> Collections -> Add My Own Data DON'T FORGET TO module.export
 // then continue S13 and add the middleware in server.js
+
+// S15: POST Request to ADD a new station
+
 // [
 //  "line": "Blue",
 //   "direction": "Inbound",
