@@ -18,7 +18,9 @@ module.exports = router;
 // then continue S13 and add the middleware in server.js
 
 // S15: POST Request to ADD a new station
-
+router.post("/add", (req, res) => {
+  const newStation = new Stations({});
+});
 // [
 //  "line": "Blue",
 //   "direction": "Inbound",
