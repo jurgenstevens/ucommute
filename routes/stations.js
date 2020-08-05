@@ -19,7 +19,10 @@ module.exports = router;
 
 // S15: POST Request to ADD a new station
 router.post("/add", (req, res) => {
-  const newStation = new Stations({});
+  const newStation = new Stations({
+    line: req.body.line,
+    stations: 
+  });
 });
 // [
 //  "line": "Blue",
