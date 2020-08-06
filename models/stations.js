@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 // S7 Add train station schema
 const stationSchema = new Schema({
   line: { type: String, required: true },
-  station: {type: String, required: true },
-  stationId: {type: Number, required: true}
+  station: { type: String, required: true },
+  stationId: { type: Number, required: true },
   transfer: { type: Boolean, required: true },
 });
 // S8: this will be exported to be used for the routes
