@@ -24,6 +24,10 @@ router.post("/add", (req, res) => {
     stationID: req.body.stationID,
     transfer: req.body.transfer,
   });
+  newStation
+    .save()
+    .then(() => res.json("New station has been listed."))
+    .catch((err) => res.status(400).json(`Error ${err}`));
 });
 module.exports = router;
 // [
