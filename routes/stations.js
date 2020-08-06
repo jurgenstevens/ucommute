@@ -13,7 +13,6 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
-module.exports = router;
 // S13: Go to MongoDB -> Collections -> Add My Own Data DON'T FORGET TO module.export
 // then continue S13 and add the middleware in server.js
 
@@ -21,44 +20,15 @@ module.exports = router;
 router.post("/add", (req, res) => {
   const newStation = new Stations({
     line: req.body.line,
-    stations: 
+    station: req.body.station,
+    stationID: req.body.stationID,
+    transfer: req.body.transfer,
   });
 });
+module.exports = router;
 // [
 //  "line": "Blue",
 //   "direction": "Inbound",
-//   "stations": [
-//       { station: "O'Hare", transfer: "false" },
-//       { station: "Rosemont", transfer: "false" },
-//       { station: "Cumberland", transfer: "false" },
-//       { station: "Harlem", transfer: "false" },
-//       { station: "Jefferson Park", transfer: "false" },
-//       { station: "Montrose", transfer: "false" },
-//       { station: "Irving Park", transfer: "false"},
-//       { station: "Addison", transfer: "false" },
-//       { station: "Belmont", transfer: "false" },
-//       { station: "Logan Square", transfer: "false" },
-//       { station: "California", transfer: "false"},
-//       { station: "Western", transfer: "false" },
-//       { station: "Damen", transfer: "false" },
-//       { station: "Division", transfer: "false" },
-//       { station: "Chicago", transfer: "false"},
-//       { station: "Grand", transfer: "false" },
-//       { station: "Clark & Lake", transfer: "true" },
-//       { station: "Washington", transfer: "true" },
-//       { station: "Monroe", transfer: "false"},
-//       { station: "Jackson", transfer: "true" },
-//       { station: "LaSalle", transfer: "false" },
-//       { station: "Clinton", transfer: "false" },
-//       { station: "UIC-Halsted", transfer: "false"},
-//       { station: "Racine", transfer: "false" },
-//       { station: "Western", transfer: "false" },
-//       { station: "Kedzie-Homan", transfer: "false" },
-//       { station: "Pulaski", transfer: "false"},
-//       { station: "Cicero", transfer: "false" },
-//       { station: "Austin", transfer: "false" },
-//       { station: "Oak Park", transfer: "false" },
-//       { station: "Harlem", transfer: "false" },
-//       { station: "Forest Park", transfer: "false" },
-//     ]
+//   "station": "O'Hare",
+//  "transfer" : "false" },
 // ]
