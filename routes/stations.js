@@ -39,6 +39,23 @@ router.get("/:id", (req, res) => {
     // standard promise error catch
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
+// S17: Request to UPDATE station by ID
+router.put("/update/:id", (req, res) => {
+  // it's going to be the same process as finding by ID like above at first
+  Stations.findById(req.params.id)
+    .then((station) => {
+      // here is where all of the updates happen
+      (station.line = req.body.line),
+        (station.station = req.body.station),
+        (station.stationID = req.body.stationID),
+        (station.transfer = req.body.transfer);
+      // this is to save the new station
+      station
+        .save()
+        .then(() => res.json("The station has been updated successfully."));
+    })
+    .catch((err) => res.status(400).json(`Error: ${err}`));
+});
 
 module.exports = router;
 // [
