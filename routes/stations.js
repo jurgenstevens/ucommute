@@ -29,6 +29,9 @@ router.post("/add", (req, res) => {
     .then(() => res.json("New station has been listed."))
     .catch((err) => res.status(400).json(`Error ${err}`));
 });
+
+// S16: Request to GET/FIND station by ID
+
 module.exports = router;
 // [
 //  "line": "Blue",
