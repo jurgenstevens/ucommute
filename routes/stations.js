@@ -33,7 +33,11 @@ router.post("/add", (req, res) => {
 // S16: Request to GET/FIND station by ID
 router.get("/:id", (req, res) => {
   // we're finding by ID through request, parameters and ID
-  Stations.findById(req.params.id);
+  Stations.findById(req.params.id)
+    // creating the promise to return a response and return the station in JSON format
+    .then((station) => res.json(station))
+    // standard promise error catch
+    .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
 module.exports = router;
