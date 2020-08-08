@@ -31,6 +31,10 @@ router.post("/add", (req, res) => {
 });
 
 // S16: Request to GET/FIND station by ID
+router.get("/:id", (req, res) => {
+  // we're finding by ID through request, parameters and ID
+  Stations.findById(req.params.id);
+});
 
 module.exports = router;
 // [
