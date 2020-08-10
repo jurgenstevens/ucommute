@@ -59,12 +59,14 @@ router.put("/update/:id", (req, res) => {
 
 // S18: Request to FIND post by ID and DELETE
 router.delete("/:id", (req, res) => {
-  //we can obviously see that we're going thru Staitons w/ the method to find and delete
+  //we can obviously see that we're going thru Stations w/ the method to find and delete
   Stations.findByIdAndDelete(req.params.id)
-    .then(() => res.json("The stations has been deleted successfully."))
+    .then(() => res.json("The station has been deleted successfully."))
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
+// Now that all of the routes have all been tested on Postman, the stations routes is now fully CRUDable
 
+// S14 don't forget to export the router
 module.exports = router;
 // [
 //  "line": "Blue",
