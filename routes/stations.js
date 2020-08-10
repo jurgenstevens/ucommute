@@ -58,6 +58,12 @@ router.put("/update/:id", (req, res) => {
 });
 
 // S18: Request to FIND post by ID and DELETE
+router.delete("/:id", (req, res) => {
+  //we can obviously see that we're going thru Staitons w/ the method to find and delete
+  Stations.findByIdAndDelete(req.params.id)
+    .then(() => res.json("The stations has been deleted successfully."))
+    .catch((err) => res.status(400).json(`Error: ${err}`));
+});
 
 module.exports = router;
 // [
