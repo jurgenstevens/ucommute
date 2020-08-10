@@ -57,6 +57,8 @@ router.put("/update/:id", (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
+// S18: Request to FIND post by ID and DELETE
+
 module.exports = router;
 // [
 //  "line": "Blue",
