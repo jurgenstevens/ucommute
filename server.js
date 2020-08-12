@@ -32,6 +32,9 @@ connection.once("open", () =>
 //S13: this is the middleware and will be imported from the stations.js in the routes folder
 const stationsRouter = require("./routes/stations");
 app.use("/stations", stationsRouter);
+// S13: this will be the middleware for Trips and we'll import it from trips.js in the routes folder
+const tripsRouter = require("./routes/trips");
+app.use("/trips", tripsRouter);
 
 app.listen(port, () => console.log(`The app is running on ${port}`));
 // Mongoose server connection runs without any issues
