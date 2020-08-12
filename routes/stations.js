@@ -65,6 +65,7 @@ router.delete("/:id", (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 // Now that all of the routes have all been tested on Postman, the stations routes is now fully CRUDable
+// We'll be moving onto the Trips routes
 
 // S14 don't forget to export the router
 module.exports = router;
