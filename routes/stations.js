@@ -5,7 +5,7 @@ const router = express.Router();
 const Stations = require("../models/stations");
 
 // this will be our first route
-// S12: GET request to get ALL of the posts to DISPLAY
+// S12: GET request to get ALL of the stations to DISPLAY
 router.get("/", (req, res) => {
   // we're going to find the station from the schema then create the promise to return our station in JSON format
   Stations.find()
