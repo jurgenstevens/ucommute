@@ -14,4 +14,4 @@ router.get("/", (req, res) => {
 });
 
 // S13: Go to MongoDB -> Collections -> Create Trips collection. Middleware has alreadby been included
-//
+// Reading MongoDB One-To-Many documentation to import data from stations to trips collection
