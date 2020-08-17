@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 // S7 Add train station schema
 const tripSchema = new Schema({
   userEmail: { type: String, required: false },
-  origin: [],
-  destination: [],
+  origin: [Stations],
+  destination: [Stations],
   transfer: { type: Boolean, required: false },
   tripName: { type: String, required: false },
 });
